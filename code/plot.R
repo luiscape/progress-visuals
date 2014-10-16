@@ -29,3 +29,11 @@ oplot <- ggplot(users_orgs) + theme_bw() +
   geom_line(aes(Date_and_Time, value, color = variable), size = 1.3)
 
 ggsave('plot/number-of-organizations-users.pdf', oplot, width = 400, height = 160, units = 'mm')
+
+
+
+# Number of Followers
+tplot <- ggplot(t) + theme_bw() +
+  geom_line(aes(Week, Followers), size = 1.3)
+
+ggsave('plot/number-of-followers.pdf', tplot, width = 400, height = 160, units = 'mm')
